@@ -17,7 +17,7 @@ add_definitions(-D__STDC_NO_ATOMICS__)
 # Override DEBUG CFLAGS because -O0 has been triggering strange bugs
 set(CMAKE_C_FLAGS_DEBUG "-ggdb -DOBJC_IS_DEBUG_BUILD=1")
 set(CMAKE_CXX_FLAGS_DEBUG "-ggdb -DOBJC_IS_DEBUG_BUILD=1")
-# x86Code: objc4 always defines OBJC_IS_DEBUG_BUILD=1, so it must not see -DNDEBUG
+# x86Sim: objc4 always defines OBJC_IS_DEBUG_BUILD=1, so it must not see -DNDEBUG
 string(REPLACE "-DNDEBUG" "" CMAKE_C_FLAGS_RELWITHDEBINFO "${CMAKE_C_FLAGS_RELWITHDEBINFO}")
 string(REPLACE "-DNDEBUG" "" CMAKE_CXX_FLAGS_RELWITHDEBINFO "${CMAKE_CXX_FLAGS_RELWITHDEBINFO}")
 
